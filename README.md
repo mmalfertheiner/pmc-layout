@@ -1,8 +1,13 @@
 # Angular based dashboard layout
 
-## Dependencies
+## JS Dependencies
 
 - AngularJS
+- ngRoute
 - angular-translate
+
+## CSS Dependencies
+
 - Bootstrap CSS
+- Fontawesome
 

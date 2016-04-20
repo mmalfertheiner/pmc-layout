@@ -1,0 +1,21 @@
+<div id="page">
+
+    <navbar on-show-menu="$ctrl.showMenu()"></navbar>
+
+    <div id="main-view"
+         ng-class="{'with-minimized-sidebar': $ctrl.isMinimized, 'with-expanded-sidebar': $ctrl.isShown}">
+        <sidebar on-change-size="$ctrl.changeSize()">
+
+            <li data-ng-class="{active : $parent.$ctrl.isActive('/sample')}">
+                <a data-ng-href="/pmc/sample/sample.html#/sample">
+                <span class="fa-stack fa-lg pull-left"><i
+                        class="fa fa-home fa-stack-1x "></i></span> <span data-translate="SAMPLE"></span></a>
+            </li>
+
+        </sidebar>
+
+        <div id="content-view">
+            <div data-ng-view></div>
+        </div>
+    </div>
+</div>

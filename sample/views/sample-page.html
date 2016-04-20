@@ -1,0 +1,29 @@
+<div class="content" data-ng-class="{'inner-sidebar-left-shown': $ctrl.isSidebarLeftShown, 'inner-sidebar-right-shown': $ctrl.isSidebarRightShown}">
+
+    <div class="content-header">
+        <a href="" class="menu-item menu-item-left" data-ng-click="$ctrl.toggleSidebarLeft()"><i class="fa fa-outdent"></i></a>
+        <span class="title">Sample Page</span>
+        <a href="" class="menu-item menu-item-right" data-ng-click="$ctrl.toggleSidebarRight()"><i class="fa fa-cog"></i></a>
+    </div>
+
+    <inner-sidebar-left path-segment="1">
+
+        <li data-ng-class="{active : $parent.$ctrl.isActive('sample')}">
+            <a href="" data-ng-click="$parent.$ctrl.changePath('sample')"> <span class="fa-stack fa-lg pull-left"><i
+                    class="fa fa-globe fa-stack-1x "></i></span> <span data-translate="SAMPLE"></span></a>
+        </li>
+
+    </inner-sidebar-left>
+
+    <settings></settings>
+
+
+    <div class="content-container content-container-with-left-sidebar content-container-with-right-sidebar">
+
+        <h1>Sample Page content</h1>
+
+    </div>
+
+
+    <div class="clearfix"></div>
+</div>

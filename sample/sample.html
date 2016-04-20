@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html data-ng-app="holidu.sample">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Holidu Sample</title>
+
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/app.css">
+
+    </head>
+
+    <body>
+
+        <sample-main-view></sample-main-view>
+
+        <notifier></notifier>
+
+        <script src="/js/lib/angular/angular.js"></script>
+        <script src="/js/lib/angular/angular-route.js"></script>
+        <script src="/js/lib/angular/angular-translate.min.js"></script>
+
+        <script src="/sample/app.js"></script>
+
+
+        <!-- LAYOUT -->
+        <script src="/js/layout/layout.module.js"></script>
+
+        <script src="/js/layout/components/navigation/inner-sidebar-left.js"></script>
+        <script src="/js/layout/components/navigation/sidebar.js"></script>
+        <script src="/js/layout/components/navigation/navbar.js"></script>
+
+        <!-- COMMON -->
+        <script src="/js/common/common.module.js"></script>
+
+        <script src="/js/common/components/notifier.js"></script>
+
+        <script src="/js/common/directives/cropper-tool.js"></script>
+        <script src="/js/common/directives/region-autocomplete.js"></script>
+        <script src="/js/common/directives/number-slider.js"></script>
+        <script src="/js/common/directives/background-image.js"></script>
+
+        <script src="/js/common/services/paging-service.js"></script>
+        <script src="/js/common/services/patch-service.js"></script>
+        <script src="/js/common/services/broadcast-service.js"></script>
+        <script src="/js/common/services/auto-save.js"></script>
+        <script src="/js/common/services/notification-socket.js"></script>
+        <script src="/js/common/services/notification-broadcast-service.js"></script>
+
+        <!-- SAMPLE APP -->
+        <script src="/sample/sample-main-view.js"></script>
+        <script src="/sample/components/sample-page.js"></script>
+        <script src="/sample/components/settings.js"></script>
+
+
+    </body>
+</html>
