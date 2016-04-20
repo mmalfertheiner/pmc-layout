@@ -1,7 +1,7 @@
 # Angular based dashboard layout
 
-Dependencies
-############
+## Dependencies
+
 
 - AngularJS
 - angular-translate
