@@ -1,0 +1,14 @@
+{
+  "name": "pmc-layout",
+  "version": "1.0.0",
+  "description": "AngularJS Layout for a dashbaord",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmalfertheiner/pmc-layout.git"
+  },
+  "author": {
+    "name": "Martin Malfertheiner",
+    "email": "martin.malfertheiner@gmail.com"
+  },
+  "license": "Apache 2"
+}

@@ -2,8 +2,7 @@
 
 ## Dependencies
 
-
 - AngularJS
 - angular-translate
-
 - Bootstrap CSS
+
