@@ -1,0 +1,282 @@
+#main-view {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+
+  &.with-expanded-sidebar {
+    padding-left: @sidebar-width-small;
+    overflow: scroll;
+
+    #sidebar {
+      width: @sidebar-width-small;
+    }
+
+    #content-view {
+      position: relative;
+      margin-right: 0;
+      width: auto;
+    }
+
+    .sidebar-shown {
+      .inner-sidebar {
+        left: @sidebar-width-small;
+      }
+    }
+
+  }
+}
+
+#content-view {
+  overflow-x: hidden;
+  padding: 40px 0 0;
+}
+
+#navbar {
+  display: block;
+  background: @navbar-background;
+}
+
+.navigation {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1050;
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+#sidebar {
+  z-index: 1040;
+  position: fixed;
+  left: @sidebar-width-small;
+  width: 0;
+  height: 100%;
+  margin-left: -@sidebar-width-small;
+  padding-top: 40px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: @sidebar-background;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.inner-sidebar {
+  position: fixed;
+  z-index: 20;
+  top: 40px;
+  height: 100%;
+  background-color: @inner-sidebar-background;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.inner-sidebar-left {
+  left: -@sidebar-width-small - 15px;;
+}
+
+.inner-sidebar-right {
+  right: -@sidebar-width-medium - 15px;
+}
+
+.sidebar-nav {
+  width: @sidebar-width-small;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+
+  li {
+    text-indent: 15px;
+    line-height: 40px;
+    cursor: pointer;
+
+    &.title {
+      text-transform: uppercase;
+    }
+
+    &.adjust-menu {
+      display: none;
+    }
+
+    &.active {
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.2);
+
+      a {
+        color: @sidebar-color-active;
+      }
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: @sidebar-color;
+
+      &:hover {
+        text-decoration: none;
+        color: @sidebar-color;
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.sidebar-nav-inner {
+
+  li.active {
+    background: rgba(255, 255, 255, 0.5);
+
+    a {
+      color: @inner-sidebar-color-active;
+    }
+  }
+
+  li a {
+    color: @inner-sidebar-color;
+
+    &:hover {
+      color: @inner-sidebar-color-hover;
+      background: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.sidebar-nav-inner {
+  width: @sidebar-width-small;
+}
+
+.sidebar-nav-medium {
+  width: @sidebar-width-medium;
+}
+
+.menu-title {
+  display: inline;
+  width: auto;
+}
+
+.menu-item {
+  width: 52px;
+}
+
+.menu-item-left {
+  position: absolute;
+  left: 0;
+}
+
+.menu-item-right {
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: @screen-md) {
+
+  #main-view {
+    padding-left: @sidebar-width-small;
+
+    &.with-expanded-sidebar {
+      padding-left: 0;
+
+      #content-view {
+        position: relative;
+        margin-right: 0;
+        padding-left: @sidebar-width-small;
+        width: auto;
+      }
+
+      #sidebar {
+        width: @sidebar-width-small;
+      }
+    }
+
+    &.with-minimized-sidebar {
+
+      #content-view {
+        position: relative;
+        margin-right: 0;
+        margin-left: -@sidebar-width-small + 50px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        width: auto;
+      }
+
+      .inner-sidebar-left {
+        left: 50px;
+      }
+
+      #sidebar {
+        width: 50px;
+      }
+    }
+  }
+
+  #navbar {
+    display: none;
+  }
+
+  #content-view {
+    position: relative;
+    padding-top: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .inner-sidebar-right {
+    right: 0;
+  }
+
+  .inner-sidebar-left {
+    left: @sidebar-width-small;
+  }
+
+  .inner-sidebar {
+    top: 0;
+  }
+
+  #sidebar {
+    padding-top: 0;
+    width: @sidebar-width-small;
+  }
+
+  .sidebar-nav li.adjust-menu {
+    display: inherit;
+  }
+
+  .menu-item-left {
+    display: none;
+  }
+
+  .menu-item-right {
+    display: none;
+  }
+
+  .user-menu {
+    border: none;
+  }
+
+  .user-logo {
+    color: @white;
+    background: @black;
+  }
+
+  .user-name {
+    color: @black;
+  }
+
+}
+
+
